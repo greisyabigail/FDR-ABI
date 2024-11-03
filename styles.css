@@ -1,0 +1,822 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #adf0e6;
+    line-height: 1.6;
+}
+
+/* Estilo de la cabecera e imagen principal */
+header .header-image {
+    width: 100%;
+    max-height: 300px;
+    overflow: hidden;
+}
+
+header .hero-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Menu bar justo debajo de la imagen */
+nav.menu-bar {
+    background-color: #003366; /* Azul oscuro */
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.menu-bar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+}
+
+.menu-bar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-bar ul li a i {
+    margin-right: 8px; /* Espacio entre icono y texto */
+}
+
+nav.menu-bar ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav.menu-bar ul li {
+    margin: 0 20px;
+}
+
+nav.menu-bar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav.menu-bar ul li a:hover {
+    background-color: white; /* Fondo blanco al hacer hover */
+    color: #003366; /* Texto azul oscuro al hacer hover */
+    border-radius: 5px;
+}
+
+/* Estilo de las secciones */
+section {
+    padding: 40px;
+    text-align: center;
+    background-color: white;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 80%;
+    box-shadow: 0px 4px 8px rgba(0, 5, 57, 0.1);
+}
+
+/* Estilos para las secciones Misión y Visión */
+.mision, .vision {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    margin: 40px auto;
+    background-color: #f9f9f9;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.mision-content, .vision-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.mision img, .vision img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.mision-text, .vision-text {
+    width: 70%;
+    text-align: justify;
+}
+
+h2 {
+    font-size: 2em;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #b0daed;
+}
+
+/* Header */
+.header-image img {
+    width: 100%;
+    height: auto;
+}
+
+.menu-bar {
+    background-color: #003366;
+    padding: 10px;
+}
+
+.menu-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-bar li {
+    display: inline;
+}
+
+.menu-bar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-bar a:hover {
+    text-decoration: underline;
+}
+
+.video-containerr {
+    display: flex;
+    justify-content: center; /* Centra el video horizontalmente */
+    margin: 20px 0;
+}
+
+video {
+    width: 80%; /* Ajusta el tamaño del video */
+    max-width: 800px; /* Tamaño máximo */
+    border: 3px solid #003366; /* Opcional: agrega un borde */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+
+/* Estilos para la sección de Oferta Académica */
+.oferta-academica {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    color: #003366;
+}
+
+.oferta-academica h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para la sección de Oferta Académica con flip cards */
+.programas-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres tarjetas por fila */
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+    background-color: transparent; /* Fondo transparente */
+}
+
+.programa-card {
+    background-color: transparent; /* Fondo transparente para las tarjetas */
+    width: 250px;
+    height: 300px;
+    perspective: 1000px;
+    margin: 20px;
+}
+
+/* Diseño interno de la tarjeta para el efecto flip */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.programa-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.flip-card-front {
+    background-color: #b2d4e6;
+    color: #003366;
+}
+
+.flip-card-back {
+    background-color: #1e5790;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.logros-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres logros por fila */
+    gap: 20px;
+    padding: 20px;
+}
+
+.logro-card {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.logro-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.logro-card img {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 15px;
+}
+
+.logro-card h3 {
+    color: #003366;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.logro-card p {
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* Estilos de las tarjetas de contenido (para logros, instalaciones, etc.) */
+.card {
+    width: 280px;
+    background-color: #94dcf2ba;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 200%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 15px 0;
+    color: #003366;
+}
+.imagen-zoom {
+    transition: transform 0.3s ease; /* Suaviza el efecto de transición */
+}
+
+.imagen-zoom:hover {
+    transform: scale(1.2); /* Aumenta el tamaño al 120% al hacer hover */
+}
+
+/* Estilos globales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Imagen de cabecera */
+.header-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Menú de navegación */
+.menu-bar {
+    background-color: #003366;
+    padding: 15px 0;
+}
+
+.menu-bar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-bar ul li {
+    margin: 0 20px;
+}
+
+.menu-bar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.menu-bar ul li a:hover {
+    color: #f4f4f4;
+}
+/* Efecto de zoom en video o imagen */
+.video-container, .image-zoom {
+    width: 300px; /* Tamaño inicial */
+    overflow: hidden;
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+.video-container:hover, .image-zoom:hover {
+    transform: scale(1.2); /* Ampliación al pasar el mouse */
+}
+
+video, img {
+    width: 100%;
+    height: auto;
+}
+/* Estilo de la imagen de portada y menú */
+.header-image img {
+    width: 100%;
+    height: auto;
+}
+
+.menu-bar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.menu-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-bar ul li a {
+    color: white;
+    padding: 14px 20px;
+    display: block;
+    text-decoration: none;
+}
+
+.menu-bar ul li a:hover {
+    background-color: #555;
+}
+
+/* Estilos del contenedor de formulario de contacto */
+.contact-form-container {
+    background-color: white;
+    padding: 40px;
+    margin: 40px auto;
+    border-radius: 10px;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #003366;
+}
+.contact-form-container h6 {
+    text-align: center;        
+    font-size: 14px;           
+    margin-bottom: 20px;       
+    color: #080808;             
+}
+
+/* Estilo para el formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input, form textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0059b3;
+}
+
+
+/* Estilos de la  Promo 2024 */
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header y cambio de imagen */
+.header-images {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.header-img {
+    display: none;
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.header-img.active {
+    display: block;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Menu bar */
+.menu-bar ul {
+    display: flex;
+    justify-content: center;
+    background-color: #003366;
+    list-style: none;
+}
+
+.menu-bar ul li {
+    margin: 0 15px;
+}
+
+.menu-bar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Galería de imágenes */
+.promo-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.promo-img-container {
+    position: relative;
+    text-align: center;
+}
+
+.zoom-img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.zoom-img:hover {
+    transform: scale(1.1);
+}
+
+.promo-img-container p {
+    margin-top: 10px;
+    color: #003366;
+    font-weight: bold;
+}
+
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .programa-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .programa-card {
+        width: 100%;
+    }
+}
+.imagen-marco-sombra {
+    border: 4px solid #ccc;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* Ajusta para más o menos sombra */
+    padding: 5px;
+}
+.imagen-polaroid {
+    border: 10px solid white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    background-color: white;
+}
+/* Estilos generales para la página */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.content {
+    min-height: 2000px; /* Altura de ejemplo para hacer scroll */
+    padding: 20px;
+}
+
+/* Estilo del botón "Volver Arriba" */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* Oculto inicialmente */
+    width: 50px;
+    height: 50px;
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+/* Efecto al pasar el cursor */
+.back-to-top:hover {
+    background-color: #0059b3;
+}
+
+/* Mostrar el botón cuando se desplaza hacia abajo */
+body:has(.content:focus-within) .back-to-top {
+    display: block;
+}/* Estilos generales para la página */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.content {
+    min-height: 2000px; /* Altura de ejemplo para hacer scroll */
+    padding: 20px;
+}
+
+/* Estilo del botón "Volver Arriba" */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* Oculto inicialmente */
+    width: 50px;
+    height: 50px;
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+/* Efecto al pasar el cursor */
+.back-to-top:hover {
+    background-color: #0059b3;
+}
+
+/* Mostrar el botón cuando se desplaza hacia abajo */
+body:has(.content:focus-within) .back-to-top {
+    display: block;
+}
+/* Estilos generales para la página */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.content {
+    min-height: 2000px; /* Altura de ejemplo para hacer scroll */
+    padding: 20px;
+}
+
+/* Estilo del botón "Volver Arriba" */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* Oculto inicialmente */
+    width: 50px;
+    height: 50px;
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+/* Efecto al pasar el cursor */
+.back-to-top:hover {
+    background-color: #0059b3;
+}
+
+/* Mostrar el botón cuando se desplaza hacia abajo */
+body:has(.content:focus-within) .back-to-top {
+    display: block;
+}
+/* Estilos generales para la página */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.content {
+    min-height: 2000px; /* Altura de ejemplo para hacer scroll */
+    padding: 20px;
+}
+
+/* Estilo del botón "Volver Arriba" */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* Oculto inicialmente */
+    width: 50px;
+    height: 50px;
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+/* Efecto al pasar el cursor */
+.back-to-top:hover {
+    background-color: #0059b3;
+}
+
+/* Mostrar el botón cuando se desplaza hacia abajo */
+body:has(.content:focus-within) .back-to-top {
+    display: block;
+}
+/* Estilo general para pantallas grandes */
+body {
+    font-size: 18px;
+}
+
+/* Ajuste para pantallas más pequeñas, como teléfonos móviles */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+}
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.image-containerr {
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px; /* Ajusta el tamaño según sea necesario */
+    margin: 0 auto;
+}
+
+.zoom-image {
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.zoom-image:hover {
+    transform: scale(1.1);
+}
+
+.video-sectionn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.video-containerr {
+    width: 100%;
+    max-width: 800px; /* Tamaño máximo del video para pantallas grandes */
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* Relación de aspecto 16:9 */
+}
+
+.video-containerr iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
